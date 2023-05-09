@@ -1,5 +1,4 @@
 #!/bin/bash
-py_file=$PYFILE
-pyc_file="${py_file}c"
-python -m py_compile "${py_file}" && mv "${py_file}c" "${pyc_file}"
-
+pyfile=$PYFILE
+pycfile="${py_file}c"
+python3 -m compileall "$pyfile" > /dev/null 2>&1
