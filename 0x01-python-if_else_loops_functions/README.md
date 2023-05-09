@@ -3,7 +3,7 @@ My journey in Python begins.
 # If-Else Loops and Functions Project
 
 ## Overview
-This project is part of the curriculum for the ALX SE Bootcamp. The goal of this project is to provide a practical introduction to if-else loops and functions in Python. The project includes several code examples that demonstrate how to use if-else loops and functions to control program flow and organize code.
+This project is  part of the curriculum for the ALX SE Bootcamp. The goal of this project is to provide a practical introduction to if-else loops and functions in Python. The project includes several code examples that demonstrate how to use if-else loops and functions to control program flow and organize code.
 
 ## Requirements
 To run the code in this project, you will need Python 3.x installed on your system. You can download Python from the official website: https://www.python.org/downloads/
