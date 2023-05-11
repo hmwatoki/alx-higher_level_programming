@@ -28,7 +28,8 @@ In this example, we're importing a function named  my_function  from a module na
 ## How to Import Functions with Aliases in Python 
  
 You can also use the  as  keyword to give a function or module a different name when you import it. Here's an example:
-```from mymodule import myfunction as mf
+```
+from mymodule import myfunction as mf
 
 mf()
 ```
