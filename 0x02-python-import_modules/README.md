@@ -19,7 +19,8 @@ In this example, we're importing a module named  my_module  and calling a functi
 ## How to Import Functions in Python 
  
 To import a specific function from a module in Python, you can use the  from  statement followed by the name of the module and the name of the function. Here's an example:
-```from mymodule import myfunction
+```
+from mymodule import myfunction
 
 my_function()
 ```
