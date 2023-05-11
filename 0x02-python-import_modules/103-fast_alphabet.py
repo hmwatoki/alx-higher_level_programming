@@ -1,3 +1,4 @@
 #!/usr/bin/env python3
 import string
-print(string.ascii_uppercase)
+import sys
+sys.stdout.write(string.ascii_uppercase + '\n')
