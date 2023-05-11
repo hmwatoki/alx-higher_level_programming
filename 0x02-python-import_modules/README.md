@@ -1,6 +1,4 @@
-Here's the reformatted code: 
- 
-# Importing Modules and Functions in Python 
+ # Importing Modules and Functions in Python 
  
 Welcome to my ALX SE bootcamp project about importing modules and functions in Python! This project was created as a way for me to learn more about how to import modules and functions in Python, and I hope that it will be useful to others who are just starting to explore this topic as well. 
  
