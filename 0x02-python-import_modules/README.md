@@ -19,9 +19,10 @@ In this example, we're importing a module named  my_module  and calling a functi
 ## How to Import Functions in Python 
  
 To import a specific function from a module in Python, you can use the  from  statement followed by the name of the module and the name of the function. Here's an example:
-`from mymodule import myfunction`
+```from mymodule import myfunction
 
-`my_function()`
+my_function()
+```
 In this example, we're importing a function named  my_function  from a module named  my_module . 
  
 ## How to Import Functions with Aliases in Python 
@@ -29,7 +30,8 @@ In this example, we're importing a function named  my_function  from a module na
 You can also use the  as  keyword to give a function or module a different name when you import it. Here's an example:
 ```from mymodule import myfunction as mf
 
-mf()```
+mf()
+```
 In this example, we're importing a function named  my_function  from a module named  my_module , but we're giving it the alias  mf . 
  
 ## Conclusion 
