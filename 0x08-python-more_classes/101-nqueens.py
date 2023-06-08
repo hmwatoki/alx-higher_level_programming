@@ -34,7 +34,6 @@ def main():
     if n < 4:
         print("N must be at least 4")
         return
-     # Solve the N queens problem
     board = [[0] * n for _ in range(n)]
     solutions = []
     solve_n_queens(board, 0, n, solutions)
