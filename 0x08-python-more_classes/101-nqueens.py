@@ -22,7 +22,6 @@ def print_solutions(solutions):
     for solution in solutions:
         print(solution)
 def main():
-    # Parse command-line arguments
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         return
