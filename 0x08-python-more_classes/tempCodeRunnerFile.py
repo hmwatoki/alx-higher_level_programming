@@ -11,9 +11,7 @@ def solve_n_queens(board, row, n, solutions):
             for j in range(n):
                 if board[i][j] == 1:
                     solution.append([i, j])
-        if all(check_two_queens(solution[i], solution[j]) for i in range(len(solution)) for j in range(i+1, len(solution))):
-
-            solutions.append(solution)
+        solutions.append(solution)
         return
     for col in range(n):
         if is_safe(board, row, col, n):
@@ -23,17 +21,6 @@ def solve_n_queens(board, row, n, solutions):
 def print_solutions(solutions):
     for solution in solutions:
         print(solution)
-def check_two_queens(new_queen_position, other_queen_position):
-    if new_queen_position[0] == other_queen_position[0] or new_queen_position[1] == other_queen_position[1]:
-        # Check if new queen is in same row or column as other queen
-        return False
-    if new_queen_position[0] + new_queen_position[1] == other_queen_position[0] + other_queen_position[1]:
-        # Check if new queen is on same diagonal as other queen
-        return False
-    if new_queen_position[0] - new_queen_position[1] == other_queen_position[0] - other_queen_position[1]:
-        # Check if new queen is on same diagonal as other queen
-        return False
-    return True
 def main():
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
