@@ -1,0 +1,49 @@
+import random
+
+def test_matrix_mul():
+    """
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+    >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+    [[19, 22], [43, 50]]
+
+    >>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
+    [[58, 64], [139, 154]]
+
+    >>> matrix_mul([[1, 2], [3, 4]], [[5, 6, 7], [8, 9, 10]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a and m_b can't be multiplied
+
+    >>> matrix_mul([[1, 2], [3, 'a']], [[4, 5], [6, 7]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a should contain only integers or floats or m_b should contain only integers or floats
+
+    >>> matrix_mul([], [])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a can't be empty or m_b can't be empty
+
+    >>> matrix_mul([1, 2], [3, 4])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list or m_b must be a list
+
+    >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8], [9, 10]])
+    Traceback (most recent call last):
+        ...
+    TypeError: each row of m_a must be of the same size or each row of m_b must be of the same size
+    """
+
+    for _ in range(5):
+        m_a = [[random.randint(0, 9) for _ in range(random.randint(1, 5))] for _ in range(random.randint(1, 5))]
+        m_b = [[random.randint(0, 9) for _ in range(random.randint(1, 5))] for _ in range(random.randint(1, 5))]
+        result = matrix_mul(m_a, m_b)
+        assert len(result) == len(m_a)
+        assert len(result[0]) == len(m_b[0])
+        for i in range(len(result)):
+            for j in range(len(result[0])):
+                expected_value = sum([m_a[i][k] * m_b[k][j] for k in range(len(m_b))])
+                assert result[i][j] == expected_value
+
+test_matrix_mul()
