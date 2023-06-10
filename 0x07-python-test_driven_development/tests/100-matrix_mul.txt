@@ -1,3 +1,4 @@
+"""Defines a matrix multiplication function."""
 def test_matrix_mul():
     """
     >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
