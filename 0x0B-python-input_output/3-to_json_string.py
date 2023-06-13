@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+import json
+"""Converts obj to string"""
+
+
 def to_json_string(my_obj):
     """
     Converts a Python object into a JSON string representation.
