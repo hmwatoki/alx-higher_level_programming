@@ -3,6 +3,7 @@
 
 
 class MyList(list):
+    """Impliments sorted list"""
     def print_sorted(self):
         """
         Sorts the elements in the object and prints them in ascending order.
