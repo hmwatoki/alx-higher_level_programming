@@ -1,0 +1,39 @@
+>>> MyList = __import__('1-my_list').MyList
+
+# Create an empty MyList object and print the sorted list
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+# Output: []
+
+# Append elements to the list and print the sorted list
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+# Output: [1]
+
+# Append multiple elements to the list and print the sorted list
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(-3)
+>>> my_list.print_sorted()
+[-3, 1, 2, 3]
+# Output: [-3, 1, 2, 3]
+
+# Create another MyList object with an empty list and print the sorted list
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+# Output: []
+
+# Append both negative and positive numbers to the list and print the sorted list
+>>> my_list.append(-4)
+>>> my_list.append(-5)
+>>> my_list.append(-6)
+>>> my_list.append(1000)
+>>> my_list.append(-1000)
+>>> my_list.append(5000)
+>>> my_list.append(-1)
+>>> my_list.print_sorted()
+[-1000, -6, -5, -4, -1, 1000, 5000]
+# Output: [-1000, -6, -5, -4, -1, 1000, 5000]
