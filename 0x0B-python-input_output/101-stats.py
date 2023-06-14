@@ -12,6 +12,7 @@ def print_stats(size, status_codes):
     status_codes = dict(sorted(status_codes.items()))
     print(f"File size: {size}")
     print("\n".join([f"{key}: {status_codes[key]}" for key in status_codes]))
+    
 
 if __name__ == "__main__":
     import sys
