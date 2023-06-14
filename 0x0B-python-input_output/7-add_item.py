@@ -7,13 +7,11 @@ import json
 from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
 
-filename = "add_item.json"
-
 try:
-    data = load_from_json_file(filename)
-except FileNotFoundError:
-    data = []
+    jsonList = load_from_json_file("add_item.json")
+except:
+    jsonList = []
 
-data.extend(sys.argv[1:])
-
-save_to_json_file(data, filename)
+for i in sys.argv[1:]:
+    jsonList.append(i)
+save_to_json_file(jsonList, "add_item.json")
