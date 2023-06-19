@@ -2,7 +2,7 @@
 """Creats a subclass rectangle"""
 
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -50,22 +50,47 @@ class Rectangle(Base):
         """
         Sets the width attribute of the Rectangle object to the given value.
         """
-        self.__width = value
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        else:
+            self.__width = value
 
     def set_height(self, value):
         """
         Sets the height attribute of the Rectangle object to the given value.
         """
-        self.__height = value
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        else:
+            self.__height = value
 
     def set_x(self, value):
         """
         Sets the x attribute of the Rectangle object to the given value.
         """
-        self.__x = value
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        elif value <= 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = value
 
     def set_y(self, value):
         """
         Sets the y attribute of the Rectangle object to the given value.
         """
-        self.__y = value
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        elif value <= 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = value
+
+    def area(self):
+        """returns area"""
+        return self.__width * self.__height
+    
+    def display(self):
+        """Displays rectangle"""
+        for i in range(self.__height):
+            print('#' * self.__width)
