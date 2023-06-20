@@ -32,51 +32,51 @@ class Rectangle(Base):
             raise ValueError("{} must be >= 0".format(name))
 
     # Getter methods
-    def get_width(self):
+    def width(self):
         """
         Returns the width attribute of the Rectangle object.
         """
         return self.__width
 
-    def get_height(self):
+    def height(self):
         """
         Returns the height attribute of the Rectangle object.
         """
         return self.__height
 
-    def get_x(self):
+    def x(self):
         """
         Returns the x attribute of the Rectangle object.
         """
         return self.__x
 
-    def get_y(self):
+    def y(self):
         """
         Returns the y attribute of the Rectangle object.
         """
         return self.__y
 
     # Setter methods
-    def set_width(self, value):
+    def width(self, value):
         """
         Sets the width attribute of the Rectangle object to the given value.
         """
         self.validator("width", value)
         self.__width = value
 
-    def set_height(self, value):
+    def height(self, value):
         """sets height"""
         self.validator("height", value)
         self.__height = value
 
-    def set_x(self, value):
+    def x(self, value):
         """
         Sets the x attribute of the Rectangle object to the given value.
         """
         self.validator("x", value)
         self.__x = value
 
-    def set_y(self, value):
+    def y(self, value):
         """
         Sets the y attribute of the Rectangle object to the given value.
         """
