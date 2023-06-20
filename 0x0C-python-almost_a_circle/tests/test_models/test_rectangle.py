@@ -57,6 +57,13 @@ class TestRectangle(unittest.TestCase):
             r.display()
             output = buffer.getvalue().strip()
         self.assertEqual(output, '###\n###')
-        
+
+    def test_str(self):
+        """Tests __str__ method"""
+        r = Rectangle(7, 4, 1, 3)
+        output = str(r)
+        self.assertEqual(output, '[Rectangle] ({}) 1/3 - 7/4'.format(r.id))
+
+
 if __name__ == '__main__':
     unittest.main()

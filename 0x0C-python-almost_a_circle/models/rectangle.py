@@ -89,8 +89,18 @@ class Rectangle(Base):
     def area(self):
         """returns area"""
         return self.__width * self.__height
-    
+
     def display(self):
         """Displays rectangle"""
         for i in range(self.__height):
             print('#' * self.__width)
+
+    def __str__(self):
+        """Overrides default string representation"""
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(
+            self.id,
+            self.get_x(),
+            self.get_y(),
+            self.get_width(),
+            self.get_height()
+        )
