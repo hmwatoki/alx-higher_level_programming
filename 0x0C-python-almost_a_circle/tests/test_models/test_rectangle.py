@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 
 class TestRectangle(unittest.TestCase):
+    """Tests for the Rectangle class"""
 
     def setUp(self):
         """
