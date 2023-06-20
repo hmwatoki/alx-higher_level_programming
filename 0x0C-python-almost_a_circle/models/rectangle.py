@@ -53,6 +53,7 @@ class Rectangle(Base):
     # Setter methods
     @width.setter
     def width(self, value):
+        """Sets the width attribute of the Rectangle object"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -62,6 +63,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """Sets the height attribute of the Rectangle object"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -71,6 +73,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """Sets the x attribute of the Rectangle object"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         elif value < 0:
@@ -80,6 +83,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """Sets the y attribute of the Rectangle object"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -92,9 +96,21 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """Displays rectangle"""
+        """Displays the rectangle"""
+        for i in range(self.y):
+            print()
         for i in range(self.height):
-            print('#' * self.width)
+            print(" " * self.x + "#" * self.width)
+
+    def __str__(self):
+        """Returns a string representation of the Rectangle instance"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id,
+            self.x,
+            self.y,
+            self.width,
+            self.height
+        )
 
     def __str__(self):
         """Overrides default string representation"""
