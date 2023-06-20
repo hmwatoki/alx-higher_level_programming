@@ -141,6 +141,32 @@ class TestRectangle(unittest.TestCase):
         output = str(r)
         self.assertEqual(output, '[Rectangle] ({}) 1/3 - 7/4'.format(r.id))
 
+    def test_update(self):
+        """Test update method"""
+        # Test with no args
+        self.rectangle.update()
+        self.assertEqual(str(self.rectangle), "[Rectangle] (1) 30/40 - 10/20")
+
+        # Test with one arg
+        self.rectangle.update(2)
+        self.assertEqual(str(self.rectangle), "[Rectangle] (2) 30/40 - 10/20")
+
+        # Test with two args
+        self.rectangle.update(2, 15)
+        self.assertEqual(str(self.rectangle), "[Rectangle] (2) 30/40 - 15/20")
+
+        # Test with three args
+        self.rectangle.update(2, 15, 25)
+        self.assertEqual(str(self.rectangle), "[Rectangle] (2) 30/40 - 15/25")
+
+        # Test with four args
+        self.rectangle.update(2, 15, 25, 35)
+        self.assertEqual(str(self.rectangle), "[Rectangle] (2) 35/40 - 15/25")
+
+        # Test with five args
+        self.rectangle.update(2, 15, 25, 35, 45)
+        self.assertEqual(str(self.rectangle), "[Rectangle] (2)35/45 -15/25")
+
 
 if __name__ == '__main__':
     unittest.main()
