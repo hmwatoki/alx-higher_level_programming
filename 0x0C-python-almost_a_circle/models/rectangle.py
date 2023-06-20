@@ -9,7 +9,6 @@ class Rectangle(Base):
     """
     Rectangle class that inherits from Base class.
     """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initializes the Rectangle class
@@ -21,67 +20,71 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    # validator
-    def validator(self, name, value):
-        """validates the value"""
-        if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
-        if (name is 'width' or name is 'height') and value <= 0:
-            raise ValueError("{} must be > 0".format(name))
-        if (name is 'x' or name is 'y') and value < 0:
-            raise ValueError("{} must be >= 0".format(name))
-
     # Getter methods
-    def width(self):
+    def get_width(self):
         """
         Returns the width attribute of the Rectangle object.
         """
         return self.__width
 
-    def height(self):
+    def get_height(self):
         """
         Returns the height attribute of the Rectangle object.
         """
         return self.__height
 
-    def x(self):
+    def get_x(self):
         """
         Returns the x attribute of the Rectangle object.
         """
         return self.__x
 
-    def y(self):
+    def get_y(self):
         """
         Returns the y attribute of the Rectangle object.
         """
         return self.__y
 
     # Setter methods
-    def width(self, value):
+    def set_width(self, value):
         """
         Sets the width attribute of the Rectangle object to the given value.
         """
-        self.validator("width", value)
-        self.__width = value
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        else:
+            self.__width = value
 
-    def height(self, value):
-        """sets height"""
-        self.validator("height", value)
-        self.__height = value
+    def set_height(self, value):
+        """
+        Sets the height attribute of the Rectangle object to the given value.
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        else:
+            self.__height = value
 
-    def x(self, value):
+    def set_x(self, value):
         """
         Sets the x attribute of the Rectangle object to the given value.
         """
-        self.validator("x", value)
-        self.__x = value
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        elif value <= 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = value
 
-    def y(self, value):
+    def set_y(self, value):
         """
         Sets the y attribute of the Rectangle object to the given value.
         """
-        self.validator("y", value)
-        self.__y = value
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        elif value <= 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = value
 
     def area(self):
         """returns area"""
