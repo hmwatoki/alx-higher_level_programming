@@ -7,16 +7,15 @@ import json
 
 class Base:
     """Base class"""
-
     __nb_objects = 0
 
     def __init__(self, id=None):
         """
-        Initializes the `Base` class by assigning the attributes
-
+        Initializes the `Base` class by assigning the attributes.
         Args:
             id (int, optional): An integer value representing
-            the `id` attribute. Defaults to None.
+            the `id` attribute.
+            Defaults to None.
         """
         if id is not None:
             self.id = id
@@ -56,6 +55,8 @@ class Base:
             with open(filename, mode='w', encoding='utf-8') as f:
                 f.write("[]")
                 return
+
+        # Convert objects to dictionaries and then to JSON string
 
         list_dict = []
         for obj in list_objs:
