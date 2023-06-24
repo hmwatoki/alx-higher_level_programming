@@ -104,3 +104,24 @@ class Base:
 
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns an instance with all attributes already set.
+
+        Args:
+            dictionary (dict): A dictionary representation of an instance.
+
+        Returns:
+            An instance with all attributes set.
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        else:
+            dummy = cls()
+
+        dummy.update(**dictionary)
+        return dummy
